@@ -1,10 +1,17 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Navbar from '../components/Navbar/Navbar.astro';
-import style from '../style/variables.css';
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar/Navbar.astro";
+import Banner from "../components/Banner/Banner.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-	<Navbar/>
+	<Navbar />
+	<main>
+		<Banner />
+	</main>
 </Layout>
-
+<style>
+	main {
+		margin-top: 50px;
+	}
+</style>
