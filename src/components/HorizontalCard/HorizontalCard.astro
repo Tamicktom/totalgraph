@@ -1,0 +1,42 @@
+---
+import style from "./style.css";
+
+type Props = {
+    imgURL: string,
+    title: string,
+    text: string,
+    imgAlt?: string,
+    type: "left" | "right",
+}
+
+const { imgURL, imgAlt, type, title, text } : Props = Astro.props;
+
+---
+
+<div class="card_holder">
+  {
+    type === "left" ? (
+    <div class="img_holder">
+        <img src={imgURL} alt={imgAlt} />
+    </div>
+    <div class="pipe_holder">
+        <div class="pipe"></div>
+    </div>
+    <div class="card_text_holder">
+        <h3>{title}</h3>
+        <p>{text}</p>
+    </div>
+    ) : (
+    <div class="card_text_holder">
+        <h3>{title}</h3>
+        <p>{text}</p>
+    </div>
+    <div class="pipe_holder">
+        <div class="pipe"></div>
+    </div>
+    <div class="img_holder">
+        <img src={imgURL} alt={imgAlt!="" ? imgAlt : ""} />
+    </div>
+    )
+  }
+</div>

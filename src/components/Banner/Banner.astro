@@ -1,7 +1,31 @@
 ---
 import style from "./style.css";
+import HorizontalCard from "../HorizontalCard/HorizontalCard.astro";
 ---
 
 <div class="first_banner">
-    <h1>testing</h1>
+  <img src="https://picsum.photos/id/237/500/300" alt="" />
+  <div class="text_holder"><h2>Especialista em Panfletos</h2></div>
+</div>
+
+<div class="second_banner">
+  <div><h2>Porque Escolher a Totalgraph?</h2></div>
+  <div>
+    <div style="horizontal_card_holder">
+      <HorizontalCard
+        imgURL="https://picsum.photos/id/237/150/150"
+        text="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        title="Experiência"
+        type="left"
+      />
+    </div>
+    <div style="horizontal_card_holder">
+      <HorizontalCard
+        imgURL="https://picsum.photos/id/237/150/150"
+        text="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        title="Experiência"
+        type="right"
+      />
+    </div>
+  </div>
 </div>

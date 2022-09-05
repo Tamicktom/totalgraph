@@ -1,4 +1,18 @@
+@use "../../style/functions"
+@use "../../style/variables"
+
 .first_banner
+    @include functions.w-h(100%, 500px)
     background: red
-    width: 100%
-    height: 500px
+    position: relative
+
+.text_holder
+    background: white
+    @include functions.w-h(270px, 50px)
+    position: absolute
+    bottom: 0px
+    left: 0px
+    border-radius: 5px
+
+.horizontal_card_holder
+    @include functions.w-h(100%, variables.$card-size + px)
